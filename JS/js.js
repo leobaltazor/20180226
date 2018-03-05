@@ -148,8 +148,8 @@
 
 var ar = [];
 var len = +process.argv[2];
-// ar[(len-1)] = len;
-for (var i = 0; i <= len; i++) {
+ar[len] = len;
+for (var i = 0; i < len; i++) {
 	ar[i] = i;
 }
 console.log(ar.length);
