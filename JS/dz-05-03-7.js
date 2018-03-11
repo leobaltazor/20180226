@@ -1,7 +1,7 @@
-var ar = [1,2,3,4,5,6,7,8,9,10],
+var ar = [1,1,3,4,5,6,7,8,9,10],
 	sum = process.argv[2];
 console.time('mark')
-console.log("###########################")
+console.log("#########################v1#")
 for (var i = 0; i < ar.length; i++) {
 	for (var k = 0; k < ar.length; k++) {
 		if (ar[i] + ar[k+i] == sum && ar[i] != ar[k+i]) {
@@ -10,7 +10,7 @@ for (var i = 0; i < ar.length; i++) {
 
 	}
 }
-console.log("###########################")
+console.log("#########################v2#")
 for (var i = 0; i < ar.length-1; i++) {
 	for (var k = 0; k < ar.length; k++) {
 		if (ar[i] + ar[k+1] == sum) {
@@ -19,10 +19,19 @@ for (var i = 0; i < ar.length-1; i++) {
 
 	}
 }
-console.log("###########################")
+console.log("#########################v3#")
 for (var i = 0; i < ar.length; i++) {
 	for (var k = i; k < ar.length; k++) {
-		if (ar[i] + ar[k] == sum && ar[i] != ar[k]) {
+		if (ar[i] + ar[k] == sum && i != k) {
+			console.log(`${ar[i]} + ${ar[k]} = ${sum} ваши числа`)
+		}
+
+	}
+}
+console.log("#########################v4#")
+for (var i = 0; i < ar.length; i++) {
+	for (var k = i+1; k < ar.length; k++) {
+		if (ar[i] + ar[k] == sum) {
 			console.log(`${ar[i]} + ${ar[k]} = ${sum} ваши числа`)
 		}
 
