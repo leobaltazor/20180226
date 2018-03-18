@@ -1,11 +1,11 @@
-function dz3() {
+function dz3(max) {
+	//параметр max для максимального количества массива и максимального числа в массиве
 	var ar = [];
-	y = 1/Math.random();
-	x = Math.random() * y;
+	x = Math.random() * max;
 	for (var i = 0; i < x; i++) {
-		ar[i] = parseInt(Math.random() * y);
+		ar[i] = parseInt(Math.random() * max);
 	}
 	return ar;
 }
 
-console.log(dz3())
+console.log(dz3(100))
