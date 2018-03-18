@@ -9,8 +9,8 @@ function dz3(max) {
 }
 
 
-ar = dz3(10) //параметр массива задаем тут
-console.log(ar);
+arr = dz3(10) //параметр массива задаем тут
+console.log(arr);
 
 
 //Сумма
@@ -21,7 +21,7 @@ function summ(ar) {
 	}
 	return sum
 }
-console.log(`Сумма ${summ(ar)}`);
+console.log(`Сумма ${summ(arr)}`);
 
 // ####################################
 //Среднее
@@ -29,39 +29,59 @@ function midd(ar) {
 	mid = summ(ar) / ar.length
 	return mid
 }
-console.log(`Среднее ${midd(ar)}`)
+console.log(`Среднее ${midd(arr)}`)
 
+// ####################################
+// Разность
+function razn(ar) {
+	razn = 0
+	for (var i = 0; i < ar.length; i++) {
+		razn -= ar[i]
+	}
+	return razn
+}
+console.log(`Разность ${razn(arr)}`)
 
+// ####################################
+//Количество четных / нечетных элементов
+function chet_neChet(ar) {
+	var chet = 0;
+	var nchet = 0;
+	for (var i = 0; i < ar.length; i++) {
+		if (ar[i] % 2 == 0) {chet++}
+		else {nchet++}
+	}
+	// return [chet, nchet]
+	console.log(`Количество четных элементов= ${chet}, 
+Количество не четных элементов= ${nchet}`)
+}
 
-// // mid = sum / ar.length;
-// console.log(`Среднее ${mid}`)
-// console.log(`Сумма ${sum}`)
-// //Разность не уверен что правильно
-// for (var i = 0; i < ar.length; i++) {
-// 	// razn = razn - ar[i]
-// }
-// console.log(`Разность ${razn}`)
-// //Количество четных / нечетных элементов
-// for (var i = 0; i < ar.length; i++) {
-// 	// if (ar[i] % 2 == 0) {chet++}
-// 	// else {nchet++}
-// }
+chet_neChet(arr)
 
-// console.log(`Количество четных элементов= ${chet}, 
-// Количество не четных элементов= ${nchet}`)
-// //MIN MAX
-// for (var i = 0; i < ar.length; i++) {
-// 	// if (ar[i] > max) {max = ar[i]}
-// 	// if (ar[i] < min) {min = ar[i]}
-// }
-// console.log(`min= ${min}, 
-// max= ${max}`);
-// //Количество положительных и отрицательных элементов
-// for (var i = 0; i < ar.length; i++) {
-// 	// if (ar[i] < 0) {otr++}
-// 	// else if (ar[i] == 0) {zer++}
-// 	// else {pol++}
-// }
-// console.log(`Количество положительных= ${pol}, 
-// Количество отрицательных= ${otr},
-// Количество 0= ${zer}`);
+// ####################################
+//MIN MAX
+function min_max(ar) {
+	var max=ar[1], min=ar[1];
+	for (var i = 0; i < ar.length; i++) {
+	if (ar[i] > max) {max = ar[i]}
+	if (ar[i] < min) {min = ar[i]}
+}
+console.log(`min= ${min}, 
+max= ${max}`);
+}
+min_max(arr)
+
+// ####################################
+//Количество положительных и отрицательных элементов
+function Kpol_Kotr(ar) {
+	var pol = 0, otr = 0, zer=0;
+	for (var i = 0; i < ar.length; i++) {
+	if (ar[i] < 0) {otr++}
+	else if (ar[i] == 0) {zer++}
+	else {pol++}
+}
+console.log(`Количество положительных= ${pol}, 
+Количество отрицательных= ${otr},
+Количество 0= ${zer}`);
+}
+Kpol_Kotr(arr)

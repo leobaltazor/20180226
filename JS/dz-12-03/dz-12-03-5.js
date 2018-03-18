@@ -1,20 +1,12 @@
-var a = +process.argv[2],
-	oper = process.argv[3],
-	b = +process.argv[4],
-	rez = 0;
-
-switch (oper) {
-case "+":
-	rez = a + b;
-	break;
-case "-":
-	rez = a - b;
-	break;
-case "*":
-	rez = a * b;
-	break;
-case "/":
-	rez = a / b;
-	break;
+function count(ar, a) {
+	var count = 0;
+	for (let i = 0; i < ar.length; i++) {
+		if (ar[i] === a) {
+			count++
+		}
+	}
+	return count
 }
-console.log(rez)
+var arr = [1,2,3,1,3,4,5,1];
+var x = 1;
+console.log(count(arr,x));
