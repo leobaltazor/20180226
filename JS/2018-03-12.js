@@ -15,6 +15,7 @@
 
 // console.log(ar);
 
+//сортировка пузырьком
 // var k =ar.length;
 // while(k--){
 // 	var j = ar.length;
