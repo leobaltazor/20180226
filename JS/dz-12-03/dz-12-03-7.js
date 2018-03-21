@@ -1,52 +1,17 @@
-var ar = [1,1,3,4,5,6,7,8,9,10],
-	sum = process.argv[2];
-console.time('mark')
-console.log("#########################v1#")
-for (var i = 0; i < ar.length; i++) {
-	for (var k = 0; k < ar.length; k++) {
-		if (ar[i] + ar[k+i] == sum && ar[i] != ar[k+i]) {
-			console.log(`${ar[i]} + ${ar[k+i]} = ${sum} ваши числа`)
-		}
-
+function kvadrat(a,b,c) {
+	var d = b * b - 4 * a * c;
+	if (d > 0) {
+		x1 = (-b + Math.pow(d, 0.5)) / (2 * a)
+		x2 = (-b - Math.pow(d, 0.5)) / (2 * a)
+		return [x1,x2]
+	} else if (d == 0) {
+		x = -b / (2 * a);
+		return x;
+	} else if (d < 0) {
+		return false
 	}
 }
-console.log("#########################v2#")
-for (var i = 0; i < ar.length-1; i++) {
-	for (var k = 0; k < ar.length; k++) {
-		if (ar[i] + ar[k+1] == sum) {
-			console.log(`${ar[i]} + ${ar[k+1]} = ${sum} ваши числа`)
-		}
 
-	}
-}
-console.log("#########################v3#")
-for (var i = 0; i < ar.length; i++) {
-	for (var k = i; k < ar.length; k++) {
-		if (ar[i] + ar[k] == sum && i != k) {
-			console.log(`${ar[i]} + ${ar[k]} = ${sum} ваши числа`)
-		}
-
-	}
-}
-console.log("#########################v4#")
-for (var i = 0; i < ar.length; i++) {
-	for (var k = i+1; k < ar.length; k++) {
-		if (ar[i] + ar[k] == sum) {
-			console.log(`${ar[i]} + ${ar[k]} = ${sum} ваши числа`)
-		}
-
-	}
-}
-var res = [];
-console.log("#########################v5#")
-for (var i = ar.length; i--;) {
-	for (var k = ar.length; k--;) {
-		if (ar[i] + ar[k] == sum) {
-			res[res.lenght] = ar[i];
-			res[res.lenght] = ar[k];
-		}
-
-	}
-}
-console.log(res);
-console.timeEnd('mark')
+console.log(`Квадратный корень ${kvadrat(1,-26,120)}`);
+console.log(`Квадратный корень ${kvadrat(1,-6,9)}`);
+console.log(`Квадратный корень ${kvadrat(5,3,7)}`);
