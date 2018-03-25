@@ -9,7 +9,7 @@ function isnan(params) {
 console.log(isnan("s"));
 console.log(isnan(2));
 console.log(isnan("2"));
-console.log("************************");
+console.log("***********Проверка*************");
 console.log(isNaN("s"));
 console.log(isNaN(2));
 console.log(isNaN("2"));

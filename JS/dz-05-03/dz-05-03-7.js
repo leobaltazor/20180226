@@ -1,7 +1,7 @@
 var ar = [1,1,3,4,5,6,7,8,9,10],
 	sum = process.argv[2];
 console.time('mark')
-console.log("#########################v1#")
+console.log("#########################v1#не правильно")
 for (var i = 0; i < ar.length; i++) {
 	for (var k = 0; k < ar.length; k++) {
 		if (ar[i] + ar[k+i] == sum && ar[i] != ar[k+i]) {
@@ -10,7 +10,7 @@ for (var i = 0; i < ar.length; i++) {
 
 	}
 }
-console.log("#########################v2#")
+console.log("#########################v2#не правильно")
 for (var i = 0; i < ar.length-1; i++) {
 	for (var k = 0; k < ar.length; k++) {
 		if (ar[i] + ar[k+1] == sum) {

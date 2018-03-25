@@ -8,4 +8,4 @@ function dz3(max) {
 	return ar;
 }
 
-console.log(dz3(100))
+console.log(dz3(10))
